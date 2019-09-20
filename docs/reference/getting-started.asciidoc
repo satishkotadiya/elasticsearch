@@ -359,7 +359,7 @@ index sorted by account number:
 
 [source,js]
 --------------------------------------------------
-GET /bank/_search
+POST /bank/_search
 {
   "query": { "match_all": {} },
   "sort": [
@@ -431,7 +431,7 @@ For example, the following request gets hits 10 through 19:
 
 [source,js]
 --------------------------------------------------
-GET /bank/_search
+POST /bank/_search
 {
   "query": { "match_all": {} },
   "sort": [
@@ -453,7 +453,7 @@ customers whose addresses contain `mill` or `lane`:
 
 [source,js]
 --------------------------------------------------
-GET /bank/_search
+POST /bank/_search
 {
   "query": { "match": { "address": "mill lane" } }
 }
@@ -467,7 +467,7 @@ matches addresses that contain the phrase `mill lane`:
 
 [source,js]
 --------------------------------------------------
-GET /bank/_search
+POST /bank/_search
 {
   "query": { "match_phrase": { "address": "mill lane" } }
 }
@@ -485,7 +485,7 @@ Idaho (ID):
 
 [source,js]
 --------------------------------------------------
-GET /bank/_search
+POST /bank/_search
 {
   "query": {
     "bool": {
@@ -518,7 +518,7 @@ accounts with a balance between $20,000 and $30,000 (inclusive).
 
 [source,js]
 --------------------------------------------------
-GET /bank/_search
+POST /bank/_search
 {
   "query": {
     "bool": {
